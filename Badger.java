@@ -7,6 +7,12 @@ public class Badger{
       }
       else{
         System.out.print("B is greater than A")
+          }
+        
+      int c = 0;
+        c = a+b;
+        
+     System.out.print("The sum of A and B is:" +c);
     }
 
 }
