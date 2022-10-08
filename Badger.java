@@ -13,6 +13,17 @@ public class Badger{
         c = a+b;
         
      System.out.print("The sum of A and B is:" +c);
+        
+        
+     int arr[] = new int[c];
+     
+     for(int i=0; i<c; i++){
+        arr[i] = i+1;
+     }
+        
+     for(int j =0; j<c; j++){
+        System.out.print(arr[j]+" ");
+     }
     }
 
 }
