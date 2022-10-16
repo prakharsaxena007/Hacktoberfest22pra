@@ -36,7 +36,32 @@ public class Ques_7 {
             }
             return result;
         }
+       boolean isCycleUtil(int currVertex, boolean [] visited, int parent){
 
+            
+            visited[currVertex] = true;
+
+           
+            for (int x = 0; x <adjList[currVertex].size() ; x++) {
+                int vertex = adjList[currVertex].get(x);
+                
+                if(vertex!=parent) {
+                    
+                    if(visited[vertex]){
+                        
+                        return true;
+                    }
+                    else{
+                        
+                        if (isCycleUtil(vertex, visited, currVertex)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+    }
  
 
     public static void main(String[] args) {
