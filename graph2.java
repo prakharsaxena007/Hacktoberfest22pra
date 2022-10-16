@@ -64,6 +64,22 @@ public class Ques_4
         }
     }    
     
+    public boolean isPresent(int v)
+    {
+        for (int i = 0; i < pathCount - 1; i++)
+            if (path[i] == v)
+                return true;
+        return false;                
+    }
+   
+    public void display()
+    {
+        System.out.print("\nPath : ");
+        for (int i = 0; i <= V; i++)
+            System.out.print(path[i % V] +" ");
+        System.out.println();
+    }    
+   
     public static void main (String[] args) 
     {
         
