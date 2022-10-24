@@ -68,7 +68,14 @@ public class tree {
 		return root;
 	} 
  
-
+	public static void inOrder(TreeNode root)
+	{
+		if(root==null)
+			return;
+		inOrder(root.left);
+		System.out.print(root.data+" ");
+		inOrder(root.right);
+	}
 	public static void main(String[] args)
 	{
  
